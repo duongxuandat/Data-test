@@ -1,0 +1,45 @@
+
+body{
+	background-color:lightgrey;
+	 margin-left: :30px margin-top:30px margin-right:30px margin-bottom:30px;
+}
+
+#m{
+	color: blue; 
+	font-size: 300%;
+	background-color:yellow;
+}
+
+#p1{
+	color:blue;
+	font-size:150%;
+}
+
+#img{
+	width: 500px;
+	height: 300px; 
+	align-content:center;
+}
+
+#vi{
+	width: 500px;
+	height:300px;
+}
+
+p, div{
+	margin-left: 10px;
+	margin-right: 20px;
+
+}
+
+
+h1{
+	text-align:center;
+	color:red; 
+	font-size: 250%;
+}
+
+
+span, hr{
+	color: blue;
+}
