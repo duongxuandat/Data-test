@@ -11,7 +11,7 @@ body{
 }
 
 #p1{
-	color:blue;
+	color:black;
 	font-size:150%;
 }
 
@@ -21,10 +21,7 @@ body{
 	align-content:center;
 }
 
-#vi{
-	width: 500px;
-	height:300px;
-	controls;
+
 }
 
 p, div{
