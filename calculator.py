@@ -34,7 +34,7 @@ def Power():
     # Calculate value of x^y
     a = int(input('\nInput number a: '))
     b = int(input('\nInput number b: '))
-    return x ** y
+    return a ** b
 
 
 def Power2():
@@ -66,9 +66,8 @@ def Sum_series():
     return total
 
 
-def myFunction(option):
+def Function(option):
     # Switch equivalent in python
-    # Equivalent switch/case in C/C++ code
     switch={
         1: Add,
         2: Sub,
@@ -82,7 +81,7 @@ def myFunction(option):
     }
     # Get the function from switch dictionary
     func = switch.get(option, lambda: "Please choose a valid function\n")
-    # Execute the function
+    # show result
     print(f"\n====>Result: {func()}\n")
     
 
@@ -98,12 +97,12 @@ while True:
     print("Press 8. to Calculate 2 ^ n")
     print("Press 0. to Exit")
     try:
-        option = int(input('Please choose a function or press 0 to exit: '))
+        option = int(input('\nPlease choose a function or press 0 to exit: '))
     except:
         print('Please input a valid number')
         continue
     if option not in [0,1,2,3,4,5,6,7,8]:
-        print('+++++Please choose a number from 0 to 8!+++++\n')
+        print('--------Please choose a number from 0 to 8!---------\n')
         input('Please enter to continue!')
         continue
-    myFunction(option)
+    Function(option)
