@@ -96,6 +96,7 @@ while True:
     print("Press 7. to Calculate 1 + 1/2 + 1/3 + .... + 1/n")
     print("Press 8. to Calculate 2 ^ n")
     print("Press 0. to Exit")
+    print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
     try:
         option = int(input('\nPlease choose a function or press 0 to exit: '))
     except:
