@@ -100,7 +100,7 @@ while True:
     try:
         option = int(input('\nPlease choose a function or press 0 to exit: '))
     except:
-        print('Please input a valid number')
+        print('\n\"It is NaN\". Please input a valid number!')
         continue
     if option not in [0,1,2,3,4,5,6,7,8]:
         print('--------Please choose a number from 0 to 8!---------\n')
