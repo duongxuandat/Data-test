@@ -47,7 +47,7 @@ def Factorial():
     # Calculate value of n!
     n = int(input('Input number n: '))
     if n < 0:
-        print("Number must > 0")
+        print("Value number must > 0")
         return
     fac = 1
     count = 1
