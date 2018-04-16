@@ -16,9 +16,9 @@ def Sub():
 def Div():
     # Calculate value of a / b
     a = int(input('\nInput number a: '))
-    print ("\nInput value b <> 0!")
+    print ("\nInput value b != 0!")
     b = int(input('\nInput number b: '))
-    if b == 0:
+    if b == 0:#check b
         return print("Input value b != 0")
     return a / b
 
@@ -46,6 +46,9 @@ def Power2():
 def Factorial():
     # Calculate value of n!
     n = int(input('Input number n: '))
+    if n < 0:
+        print("Number must > 0")
+        return
     fac = 1
     count = 1
     while count <= n:
@@ -57,7 +60,7 @@ def Factorial():
 def Sum_series():
     # Calculate value of 1 + 1/2 + 1/3 + ... + 1/n
     n = int(input('Input number n: '))
-    if n == 0:
+    if n < 0:
         return print("Input value > 0")
     total = 1
     for i in range(2, n + 1):
@@ -80,11 +83,12 @@ def Function(option):
         0: exit
     }
     # Get the function from switch dictionary
-    func = switch.get(option, lambda: "Please choose a valid function\n")
+    a = switch.get(option, lambda: "Please choose a valid function\n")
     # show result
-    print(f"\n====>Result: {func()}\n")
+    print(f"\n====>Result: {a()}\n")
+    input('Please press Enter to continue!')
     
-
+# Main funtion
 while True:
     print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
     print("Press 1. to Calculate a + b")
@@ -98,12 +102,15 @@ while True:
     print("Press 0. to Exit")
     print("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
     try:
-        option = int(input('\nPlease choose a function or press 0 to exit: '))
+        option = int(input('Please choose a function or press 0 to exit: '))
     except:
-        print('\n\"It is NaN\". Please input a valid number!')
+        print('\n\"It is NaN\".Please input a valid number!')
         continue
     if option not in [0,1,2,3,4,5,6,7,8]:
         print('--------Please choose a number from 0 to 8!---------\n')
-        input('Please enter to continue!')
+        input('Please press Enter to continue!')
         continue
-    Function(option)
+    try:    
+        Function(option)
+    except:
+        print('Invalid input\n')
